@@ -89,13 +89,23 @@ The Manager Agent is the central coordinator of the system.
 
 #### Example Workflow
 
-Document Analyst  
+<div align="center">
+
+Document Analyst
+
 ↓  
-Deadline Tracker  
+
+Deadline Tracker
+
 ↓  
-Action Advisor  
+
+Action Advisor
+
 ↓  
+
 Final Response
+
+</div>
 
 
 
@@ -186,6 +196,8 @@ The agent does not claim that an action has already been completed.
 
 ## 🔄 System Workflow
 
+<div align="center">
+
 User Uploads Document  
 ↓  
 Life Admin Guardian  
@@ -208,9 +220,13 @@ Manager combines results
 ↓  
 Final structured response
 
+</div> 
+
 The Manager Agent may use only the agents required for a particular request.
 
 ### Document Extraction Request
+
+<div align="center">
 
 User  
 ↓  
@@ -220,7 +236,11 @@ Document Analyst
 ↓  
 Final Response
 
+</div>
+
 ### Document + Deadline Request
+
+<div align="center">
 
 User  
 ↓  
@@ -232,7 +252,11 @@ Deadline Tracker
 ↓  
 Final Response
 
+</div>
+
 ### Complete Analysis Request
+
+<div align="center">
 
 User  
 ↓  
@@ -246,7 +270,7 @@ Action Advisor
 ↓  
 Final Response
 
-
+</div>
 
 ## 🧪 Testing
 
@@ -416,23 +440,19 @@ Life-Admin-Guardian/
 
 ### Manager Agent
 
-![Life Admin Guardian Manager](screenshots/manager-agent.png)
+
 
 ### Document Analyst
 
-![Document Analyst](screenshots/document-analyst.png)
 
 ### Deadline Tracker
 
-![Deadline Tracker](screenshots/deadline-tracker.png)
 
 ### Action Advisor
 
-![Action Advisor](screenshots/action-advisor.png)
 
 ### Testing Results
 
-![Testing Results](screenshots/testing-results.png)
 
 
 
