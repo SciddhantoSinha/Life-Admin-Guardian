@@ -51,6 +51,7 @@ The system includes:
 
 ## 🏗️ Multi-Agent Architecture
 
+```text
                     🛡️ LIFE ADMIN GUARDIAN
                          Manager Agent
                                │
@@ -70,7 +71,7 @@ The system includes:
                                ↓
                        Final response to user
 
-
+```
 
 ## 🤖 Agents
 
