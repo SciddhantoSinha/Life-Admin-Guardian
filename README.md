@@ -1,6 +1,6 @@
 # 🛡️ Life Admin Guardian
 
-> A multi-agent AI system built using Lyzr that analyzes personal administrative documents, identifies important deadlines, and provides practical next-step recommendations.
+A multi-agent AI system built using Lyzr that analyzes personal administrative documents, identifies important deadlines, and provides practical next-step recommendations.
 
 
 
