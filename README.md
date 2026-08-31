@@ -1,119 +1,158 @@
 # 🛡️ Life Admin Guardian
 
-A multi-agent AI system built using Lyzr that analyzes personal administrative documents, identifies important deadlines, and provides practical next-step recommendations.
+An AI-powered **multi-agent personal administration assistant** built using **Lyzr Agent Studio** to analyze personal documents, identify important deadlines, track expiry dates, and provide practical next-step recommendations.
 
 
 
 ## 📌 Project Overview
 
-Life Admin Guardian is a **multi-agent AI system** designed to help users understand and manage important information from personal administrative documents.
+Personal administrative documents such as invoices, receipts, warranty documents, bills, insurance documents, and purchase documents often contain important information that users need to track.
 
-People often have documents such as invoices, receipts, warranty documents, bills, insurance documents, and purchase documents.
+These documents may contain:
 
-These documents may contain important information such as purchase dates, payment deadlines, warranty expiry dates, renewal dates, return deadlines, and important terms.
+- Purchase dates
+- Product or service details
+- Purchase prices
+- Warranty periods
+- Warranty expiry dates
+- Return periods
+- Return deadlines
+- Payment due dates
+- Renewal dates
+- Document expiry dates
+- Important terms and conditions
 
-Life Admin Guardian uses a **Manager Agent and specialized AI sub-agents** to analyze this information and provide users with clear and practical guidance.
+Keeping track of this information manually can become difficult when multiple documents are involved.
+
+The **Life Admin Guardian** is designed as an AI-powered multi-agent system that helps users understand their documents, identify important deadlines, and determine practical next steps.
+
+> ⚠️ This AI system provides document-based information and general recommendations. Important financial, insurance, legal, or contractual information should be verified using the original document or relevant provider.
 
 
 
 ## 🎯 Problem Statement
 
-Managing multiple personal documents can be difficult because important information is often spread across different documents.
+People often need to manually:
 
-For example, users may forget:
+- Read invoices and receipts.
+- Check warranty information.
+- Remember return deadlines.
+- Track warranty expiry dates.
+- Monitor bill due dates.
+- Remember insurance renewal dates.
+- Review document expiry dates.
+- Understand important terms and conditions.
+- Decide which administrative tasks require immediate attention.
 
-- When a bill needs to be paid
-- When a product return period ends
-- When a warranty expires
-- When an insurance policy requires renewal
-- Which documents contain important conditions or requirements
+When dealing with multiple personal documents, these activities can become repetitive and difficult to manage.
 
-Life Admin Guardian helps organize this information and converts document details into useful actions.
+The **Life Admin Guardian** uses multiple specialized AI agents to assist users with document analysis, deadline tracking, and action recommendations.
 
 
 
 ## 💡 Solution
 
-Life Admin Guardian uses a **multi-agent architecture**.
+The **Life Admin Guardian** acts as a centralized AI-powered personal administration assistant.
 
-Instead of using one AI agent to perform every task, the system divides responsibilities among specialized agents.
+Instead of using one AI agent to perform every task, the project uses a **Manager Agent with specialized sub-agents**.
 
-The main Manager Agent understands the user's request and coordinates the appropriate specialized agents.
+The system can support:
 
-The system includes:
+- 📄 Document Analysis
+- 🔍 Information Extraction
+- 📅 Deadline Tracking
+- ⏰ Expiry Identification
+- 🛡️ Warranty Tracking
+- 🔄 Renewal Tracking
+- ✅ Action Recommendations
+- 🧠 Multi-Agent Coordination
 
-1. 🛡️ Life Admin Guardian — Manager Agent
-2. 📄 Document Analyst
-3. 📅 Deadline Tracker
-4. ✅ Action Advisor
+Users can interact with the system using natural-language prompts.
 
 
 
-## 🏗️ Multi-Agent Architecture
+# 🤖 Agent Architecture
+
+This project is implemented as a **Multi-Agent AI System**.
+
+One main Manager Agent, the **Life Admin Guardian**, coordinates three specialized AI agents based on the user's request.
 
 ```text
-                    🛡️ LIFE ADMIN GUARDIAN
-                         Manager Agent
-                               │
-                  Understands User Request
-                               │
-          ┌────────────────────┼────────────────────┐
-          ↓                    ↓                    ↓
-   📄 Document Analyst   📅 Deadline Tracker   ✅ Action Advisor
-          │                    │                    │
-          ↓                    ↓                    ↓
- Extract information      Identify important      Recommend
- from documents          dates and deadlines     next actions
-          │                    │                    │
-          └────────────────────┼────────────────────┘
-                               ↓
-                    Manager combines results
-                               ↓
-                       Final response to user
-
+                    USER
+                      │
+                      ▼
+              LIFE ADMIN GUARDIAN
+                  Manager Agent
+                      │
+       ┌──────────────┼──────────────┐
+       ▼              ▼              ▼
+Document Analyst  Deadline Tracker  Action Advisor
+       │              │              │
+       ▼              ▼              ▼
+Extract Document  Identify Important Recommend
+Information       Dates & Deadlines  Next Actions
+       │              │              │
+       └──────────────┼──────────────┘
+                      ▼
+             Manager Combines Results
+                      │
+                      ▼
+               FINAL RESPONSE
 ```
 
-## 🤖 Agents
+# 🔄 Multi-Agent Workflow
 
-### 🛡️ 1. Life Admin Guardian — Manager Agent
-
-The Manager Agent is the central coordinator of the system.
-
-#### Responsibilities
-
-- Understand the user's request
-- Determine which specialized agents are required
-- Delegate tasks to the appropriate agents
-- Coordinate multiple agents when necessary
-- Combine the results into one structured response
-
-#### Example Workflow
-
-<div align="center">
-
-Document Analyst
-
-↓  
-
-Deadline Tracker
-
-↓  
-
-Action Advisor
-
-↓  
-
-Final Response
-
-</div>
+    User Request
+         │
+         ▼
+    Life Admin Guardian
+       Manager Agent
+         │
+         ▼
+    Document Analysis
+         │
+         ▼
+    Information Extraction
+         │
+         ▼
+    Deadline Identification
+         │
+         ▼
+    Action Recommendations
+         │
+         ▼
+    Manager Combines Results
+         │
+         ▼
+      Final Response
 
 
 
-### 📄 2. Document Analyst
+# 🧪 Demonstration Scenario
 
-The Document Analyst extracts important information from personal administrative documents.
+For demonstration purposes, the project can use different types of personal administrative documents.
 
-#### Supported Document Types
+Example documents include:
+
+- 💻 Laptop Invoice
+- 📱 Smartphone Invoice
+- 🧺 Washing Machine Warranty
+- 🏥 Insurance Document
+- 📶 Internet Bill
+
+The system can analyze these documents and identify important information, deadlines, expiry dates, and recommended next actions.
+
+
+
+# ⚙️ Agent Workflow and Examples
+
+## 1️⃣ Document Analyst
+
+### Purpose
+
+The **Document Analyst** analyzes personal administrative documents and extracts important information.
+
+The agent can analyze:
 
 - Invoices
 - Receipts
@@ -122,9 +161,15 @@ The Document Analyst extracts important information from personal administrative
 - Insurance documents
 - Purchase documents
 
-#### Information Extracted
+### Example Input
 
-When available, the agent identifies:
+Analyze this laptop invoice and extract the product name, purchase date, purchase price, warranty period, warranty expiry date, and return deadline.
+
+### What the Agent Does
+
+The agent extracts only information that is actually present in the document.
+
+It can identify:
 
 - Product or service name
 - Purchase date
@@ -139,458 +184,478 @@ When available, the agent identifies:
 - Important terms
 - Required actions
 
-#### Important Rule
+### Example Output
 
-The agent only extracts information that is actually available in the document.
+Product: NovaBook Pro 15 Laptop
 
-If information cannot be found, it clearly states that it is unavailable.
+Purchase Date: August 10, 2026
+
+Purchase Price: ₹75,000
+
+Warranty Period: 2 years from purchase date
+
+Warranty Expiry Date: August 10, 2028
+
+Return Period: 14 days from purchase date
+
+Return Deadline: August 24, 2026
+
+The agent does not invent missing information.
+
+If information is unavailable, the agent clearly states that it cannot be determined from the document.
 
 
 
-### 📅 3. Deadline Tracker
+## 2️⃣ Deadline Tracker
 
-The Deadline Tracker identifies and organizes important dates and deadlines.
+### Purpose
 
-#### It focuses on:
+The **Deadline Tracker** identifies and organizes important dates and deadlines.
+
+It focuses on:
 
 - Return deadlines
 - Warranty expiry dates
-- Bill payment due dates
+- Bill due dates
 - Insurance renewal dates
 - Subscription renewal dates
 - Document expiry dates
 - Service dates
 - Maintenance dates
 
-For every important date, the agent identifies:
+### Example Input
 
-1. What the date relates to
-2. The actual date
-3. Why the date is important
-4. Whether the user may need to take action
+Identify all important deadlines and expiry dates from this document.
 
+### What the Agent Does
 
+For each date, the agent:
 
-### ✅ 4. Action Advisor
+- Identifies what the date relates to.
+- States the date clearly.
+- Explains why it is important.
+- Highlights important deadlines when applicable.
 
-The Action Advisor converts document information and deadlines into practical recommendations.
+### Example Output
 
-The agent can help when:
+IMPORTANT DATES
 
-- A product return deadline is approaching
-- A warranty is nearing expiry
-- A bill needs to be paid
-- An insurance policy requires renewal
-- A maintenance date is approaching
+Purchase Date: August 10, 2026
 
-For every recommendation, the Action Advisor:
+Return Deadline: August 24, 2026
 
-1. Explains what needs attention
-2. Explains why it matters
-3. Provides practical next steps
-4. Helps prioritize important actions
+Warranty Expiry Date: August 10, 2028
 
-The agent does not claim that an action has already been completed.
+### Explanation
 
+Return Deadline: August 24, 2026
 
+This is the last date available for returning the product under the 14-day return policy.
 
-## 🔄 System Workflow
+Warranty Expiry: August 10, 2028
 
-<div align="center">
+Warranty coverage ends on this date.
 
-User Uploads Document  
-↓  
-Life Admin Guardian  
-↓  
-Manager understands request  
-↓  
-Document Analyst  
-↓  
-Extracts document information  
-↓  
-Deadline Tracker  
-↓  
-Identifies important dates  
-↓  
-Action Advisor  
-↓  
-Provides practical recommendations  
-↓  
-Manager combines results  
-↓  
-Final structured response
 
-</div> 
 
-The Manager Agent may use only the agents required for a particular request.
+## 3️⃣ Action Advisor
 
-### Document Extraction Request
+### Purpose
 
-<div align="center">
+The **Action Advisor** converts available document information and deadlines into practical next-step recommendations.
 
-User  
-↓  
-Manager  
-↓  
-Document Analyst  
-↓  
-Final Response
+The agent can provide recommendations when:
 
-</div>
+- A return deadline is approaching.
+- A warranty is about to expire.
+- An insurance policy needs renewal.
+- A bill payment deadline is approaching.
+- A document is about to expire.
+- A service or maintenance date is approaching.
 
-### Document + Deadline Request
+### Example Input
 
-<div align="center">
+Based on this document information and the important deadlines, tell me what actions I should take.
 
-User  
-↓  
-Manager  
-↓  
-Document Analyst  
-↓  
-Deadline Tracker  
-↓  
-Final Response
+### Example Output
 
-</div>
+RECOMMENDED ACTIONS
 
-### Complete Analysis Request
+1. Keep the original invoice safe.
 
-<div align="center">
+2. Keep the original product packaging if the return policy requires it.
 
-User  
-↓  
-Manager  
-↓  
-Document Analyst  
-↓  
-Deadline Tracker  
-↓  
-Action Advisor  
-↓  
-Final Response
+3. Check the product before the return deadline.
 
-</div>
+4. Contact customer support if a manufacturing defect is discovered.
 
-## 🧪 Testing
+5. Keep the document until the warranty expires.
 
-The system was tested using multiple types of sample documents.
+The agent provides recommendations but does not claim that an action has already been completed.
 
-### 💻 Laptop Invoice
 
-**Test Prompt:**
 
-> Analyze this document, identify all important deadlines, and tell me what actions I should take.
-
-The system identified:
-
-- Product information
-- Purchase date
-- Purchase price
-- Warranty period
-- Warranty expiry date
-- Return period
-- Return deadline
-- Important terms
-- Recommended actions
-
-
-
-### 📶 Internet Bill
-
-**Test Prompt:**
-
-> Analyze this internet bill, identify the payment amount and payment due date, explain any important terms, and tell me what actions I should take before the deadline.
-
-The system identified:
-
-- Service provider
-- Billing information
-- Payment amount
-- Payment due date
-- Payment status
-- Late payment information
-- Required actions
-
-
-
-### 🧺 Washing Machine Warranty
-
-**Test Prompt:**
-
-> Analyze this warranty document, identify the product details, warranty period and expiry date, explain the warranty coverage and important terms, and tell me what actions I should take.
-
-The system identified:
-
-- Product information
-- Purchase date
-- Warranty period
-- Warranty expiry date
-- Warranty coverage
-- Exclusions
-- Required documents for warranty claims
-- Recommended actions
-
-
-
-### 🏥 Health Insurance Policy
-
-**Test Prompt:**
-
-> Analyze this insurance policy, identify the policy expiry date and renewal date, explain the important policy information, and tell me what actions I should take before renewal. Clearly distinguish information extracted from the document from general recommendations.
-
-The system identified:
-
-- Policy information
-- Policy expiry date
-- Renewal date
-- Renewal premium
-- Important policy terms
-- Actions required before renewal
-
-
-
-## 📊 Example Output
-
-### Important Dates and Deadlines
-
-- **Purchase Date:** August 10, 2026
-- **Return Deadline:** August 24, 2026
-- **Warranty Expiry Date:** August 10, 2028
-
-### Extracted Information
-
-- **Product:** NovaBook Pro 15 Laptop
-- **Warranty Period:** 2 years
-- **Return Period:** 14 days
-
-### Recommended Actions
-
-- Keep the original invoice safe
-- Keep the original product packaging
-- Check the product before the return deadline
-- Contact customer support if an eligible manufacturing defect occurs
-- Retain warranty documents until the warranty expires
-
-
-
-## 🛠️ Technologies Used
-
-- Lyzr Agent Studio
-- Large Language Models
-- Multi-Agent Architecture
-- Manager Agent
-- Specialized AI Agents
-- Document Analysis
-
-
-
-## ⭐ Key Features
-
-- Multi-agent AI architecture
-- Manager-based agent orchestration
-- Document information extraction
-- Deadline identification
-- Warranty tracking
-- Payment due-date tracking
-- Policy renewal tracking
-- Practical action recommendations
-- Structured responses
-- Multiple document type support
-
-
-
-## 🔐 Privacy and Data Handling
-
-Life Admin Guardian is designed to analyze user-provided information.
-
-The system is designed to:
-
-- Avoid inventing information
-- Clearly identify unavailable information
-- Distinguish extracted document facts from AI-generated recommendations
-- Avoid unnecessary exposure of sensitive personal information
-
-For demonstrations and testing, synthetic sample documents should be used instead of real personal documents.
-
-
-
-## 📁 Repository Structure
-
-Life-Admin-Guardian/
-
-├── README.md  
-│  
-├── screenshots/  
-│   ├── manager-agent.png  
-│   ├── document-analyst.png  
-│   ├── deadline-tracker.png  
-│   ├── action-advisor.png  
-│   └── testing-results.png  
-│  
-└── sample-documents/  
-    ├── sample_laptop_invoice.pdf  
-    ├── sample_internet_bill.pdf  
-    ├── sample_washing_machine_warranty.pdf  
-    └── sample_health_insurance_policy.pdf
-
-
-
-## 📸 Screenshots
-
-### Manager Agent
-
-
-
-### Document Analyst
-
-
-### Deadline Tracker
-
-
-### Action Advisor
-
-
-### Testing Results
-
-
-
-
-## 🚀 Future Improvements
-
-Possible future enhancements include:
-
-- Automatic document categorization
-- Calendar integration for deadline reminders
-- Email notifications
-- Automated warranty tracking
-- Automated bill reminders
-- Document history
-- Priority-based notifications
-- More specialized AI agents
-- Integration with personal productivity tools
-
-
-
-## 🌟 Why Multi-Agent Architecture?
-
-A single AI agent can perform multiple tasks, but Life Admin Guardian divides responsibilities among specialized agents.
-
-<div align="center">
-
-Single Agent  
-↓  
-One agent performs every task
-
-Compared with:
-
-Multi-Agent System  
-↓  
-Manager Agent  
-↓  
-Specialized Agents  
-↓  
-Coordinated Results
-
-</div>
-
-This architecture allows each specialized agent to focus on a specific responsibility.
-
-The Manager Agent determines which agents should be used depending on the user's request.
-
-
-
-## 💬 Example Use Cases
-
-### Use Case 1 — Laptop Purchase
+# 💻 Example Scenario — Laptop Invoice
 
 A user uploads a laptop invoice and asks:
 
-> What information is important, and what should I do?
+Analyze this invoice, identify the warranty and return deadline, and tell me what actions I should take.
 
-The system can:
+The Manager Agent determines that multiple specialized agents may be required.
 
-- Extract purchase information
-- Identify the return deadline
-- Identify warranty expiry
-- Recommend actions
+The workflow can be:
 
-### Use Case 2 — Internet Bill
-
-A user uploads an internet bill.
-
-The system can:
-
-- Identify the payment amount
-- Find the due date
-- Explain late-payment consequences
-- Recommend paying before the deadline
-
-### Use Case 3 — Warranty Document
-
-A user uploads a product warranty.
-
-The system can:
-
-- Identify the product
-- Find the warranty period
-- Identify the warranty expiry date
-- Explain coverage and exclusions
-
-### Use Case 4 — Insurance Policy
-
-A user uploads an insurance policy.
-
-The system can:
-
-- Identify policy dates
-- Find the expiry date
-- Identify the renewal date
-- Explain important terms
-- Recommend preparation before renewal
+    Laptop Invoice
+         │
+         ▼
+    Document Analyst
+         │
+         ▼
+    Extract Purchase Information
+         │
+         ▼
+    Extract Warranty Information
+         │
+         ▼
+    Extract Return Information
+         │
+         ▼
+    Deadline Tracker
+         │
+         ▼
+    Identify Important Dates
+         │
+         ▼
+    Action Advisor
+         │
+         ▼
+    Recommend Next Actions
+         │
+         ▼
+    Manager Combines Results
+         │
+         ▼
+      Final Response
 
 
 
-## 👨‍💻 Project Type
+# 📄 Example Extracted Information
 
-**Multi-Agent AI System**
+## Purchase Details
 
-**Domain:** AI Agents / Agentic AI / Personal Administration
+- **Store:** Sample Tech Store
+- **Invoice Number:** INV-2026-00125
+- **Product:** NovaBook Pro 15 Laptop
+- **Quantity:** 1
+- **Total Amount Paid:** ₹75,000
+- **Purchase Date:** August 10, 2026
 
-**Architecture:**
+## Warranty Details
 
-<div align="center">
+- **Warranty Period:** 2 years from purchase date
+- **Warranty Expiry Date:** August 10, 2028
+- **Warranty Coverage:** Manufacturing defects only
 
-Manager Agent  
-+  
-Specialized AI Agents  
-↓  
-Multi-Agent Orchestration
+## Return Information
 
-</div>
+- **Return Period:** 14 days from purchase date
+- **Return Deadline:** August 24, 2026
 
-## 🏁 Conclusion
+## Important Terms
 
-Life Admin Guardian demonstrates how a **Manager Agent can coordinate multiple specialized AI agents** to solve a real-world personal administration problem.
-
-The system:
-
-1. Extracts information from documents
-2. Identifies important deadlines
-3. Provides practical recommendations
-4. Produces a structured final response
-
-This project demonstrates practical implementation of:
-
-- AI Agents
-- Multi-Agent Systems
-- Agent Orchestration
-- Document Analysis
-- Agent Specialization
-- AI-powered decision support
+- Returns require the original invoice.
+- Original product packaging may be required.
+- Products damaged due to misuse may not be eligible for return.
+- Warranty covers manufacturing defects only.
 
 
 
-## 👤 Author
+# 📅 Example Important Dates
+
+| Event | Date | Importance |
+|---|---|---|
+| Purchase Date | August 10, 2026 | Product purchase date |
+| Return Deadline | August 24, 2026 | Last date available for return |
+| Warranty Expiry | August 10, 2028 | Warranty coverage ends |
+
+
+
+# 💬 Example Prompts
+
+Users can interact with the agents using prompts such as:
+
+Analyze this invoice and extract all important information.
+
+What is the warranty period mentioned in this document?
+
+Identify all important deadlines and expiry dates.
+
+When does the warranty expire?
+
+What should I do before the return deadline?
+
+Analyze this document, identify important deadlines, and tell me what actions I should take.
+
+
+
+# 🧠 Multi-Agent Orchestration
+
+A key feature of this project is **multi-agent orchestration**.
+
+Instead of assigning every responsibility to one AI agent, the project separates the workflow into specialized agents.
+
+Each agent has a specific responsibility:
+
+**Document Analyst**
+
+Extracts important information from documents.
+
+**Deadline Tracker**
+
+Identifies important dates and deadlines.
+
+**Action Advisor**
+
+Provides practical next-step recommendations.
+
+The **Life Admin Guardian Manager Agent** understands the user's request and determines which specialized agents should be used.
+
+For requests requiring multiple stages, the Manager Agent can coordinate multiple agents.
+
+For example:
+
+    User uploads an invoice
+
+         │
+         ▼
+
+    Document Analyst
+    Extract document information
+
+         │
+         ▼
+
+    Deadline Tracker
+    Identify return deadline
+
+         │
+         ▼
+
+    Action Advisor
+    Recommend practical next steps
+
+         │
+         ▼
+
+    Manager Agent
+    Combines results
+
+         │
+         ▼
+
+      Final Response
+
+
+
+# 📄 Document and PDF Support
+
+Personal administrative documents are often available in PDF format.
+
+The agents can work with document-based information as part of the workflow.
+
+For example:
+
+    Personal Document (PDF)
+             │
+             ▼
+       AI Document Analysis
+             │
+             ▼
+    Extract Important Information
+             │
+             ▼
+    Identify Dates and Deadlines
+             │
+             ▼
+    Generate Action Recommendations
+             │
+             ▼
+      Provide Structured Response
+
+
+
+# 🧠 Conversational Memory
+
+Memory can help maintain context during an interaction.
+
+### Example
+
+First, the user asks:
+
+Analyze this laptop invoice.
+
+Later, the user asks:
+
+What important deadlines should I remember?
+
+The system can understand that the second request refers to the information discussed during the earlier interaction.
+
+This creates a more natural conversational experience.
+
+
+
+# ⚖️ Responsible AI
+
+Responsible AI is important when processing personal administrative documents.
+
+Important considerations include:
+
+- Extract only information present in the document.
+- Do not invent missing information.
+- Clearly distinguish document facts from AI-generated recommendations.
+- Protect sensitive personal information.
+- Do not claim that an action has already been completed.
+- Do not make important decisions on behalf of the user.
+- Encourage users to review original documents when necessary.
+
+> **The AI provides assistance and recommendations, while important decisions and actions remain with the user.**
+
+
+
+# 🛠️ Technologies and Concepts Used
+
+- **Lyzr Agent Studio**
+- **Artificial Intelligence**
+- **Generative AI**
+- **Large Language Models (LLMs)**
+- **Multi-Agent Systems**
+- **Agent Orchestration**
+- **Manager Agent**
+- **Specialized AI Agents**
+- **Prompt Engineering**
+- **Document Processing**
+- **PDF Support**
+- **Conversational Memory**
+- **Responsible AI**
+
+
+
+# 🎯 Key Benefits
+
+The Life Admin Guardian can help provide:
+
+- 📄 Structured document information
+- ⏱️ Reduced manual document review
+- 📅 Easier deadline tracking
+- 🛡️ Warranty tracking
+- 🔄 Renewal and expiry awareness
+- ⏰ Better awareness of important dates
+- ✅ Practical next-step recommendations
+- 🧠 Multi-agent task coordination
+- 💬 Natural-language interaction
+
+
+
+# 🔮 Future Enhancements
+
+Possible future improvements include:
+
+- Automatic deadline reminders
+- Calendar integration
+- Email notifications
+- Document database integration
+- Cloud document storage
+- OCR for scanned documents
+- Automatic document categorization
+- Mobile application integration
+- Personal task management integration
+- Additional specialized AI agents
+
+A future expanded multi-agent architecture could include:
+
+```text
+    Life Admin Guardian
+       Manager Agent
+             │
+      ┌──────┼──────┐
+      ▼      ▼      ▼
+Document  Deadline  Action
+ Agent     Agent    Agent
+      │      │      │
+      └──────┼──────┘
+             ▼
+     Notification Agent
+             │
+             ▼
+      Calendar Integration
+
+```
+
+# 📸 Screenshots
+
+Screenshots of the project can be added to the repository.
+
+Suggested screenshots:
+
+- Life Admin Guardian Manager Agent
+- Document Analyst configuration
+- Document Analyst demonstration
+- Deadline Tracker demonstration
+- Action Advisor demonstration
+- Full multi-agent workflow demonstration
+
+### Life Admin Guardian Interface
+
+
+
+
+
+# 📁 Repository Structure
+
+    life-admin-guardian/
+    │
+    ├── README.md
+    │
+    ├── screenshots/
+    │   ├── agent-interface.png
+    │   ├── document-analyst-demo.png
+    │   ├── deadline-tracker-demo.png
+    │   ├── action-advisor-demo.png
+    │   └── multi-agent-workflow.png
+    │
+    └── docs/
+        └── project-workflow.md
+
+
+
+# 👨‍💻 Author
 
 **Sciddhanto Sinha**
+
+Aspiring AI and Intelligent Automation Professional
+
+
+
+# ⭐ Project Summary
+
+The **Life Admin Guardian** is a **multi-agent AI-powered personal administration assistant** developed using **Lyzr Agent Studio**.
+
+It uses a Manager Agent to coordinate multiple specialized agents:
+
+    Document Analyst
+           ↓
+    Deadline Tracker
+           ↓
+    Action Advisor
+           ↓
+    Manager Combines Results
+           ↓
+      Final Response
+
+The **Document Analyst** extracts important information from personal documents.
+
+The **Deadline Tracker** identifies important dates, deadlines, and expiry information.
+
+The **Action Advisor** converts the available information into practical next-step recommendations.
+
+The primary objective of the project is to demonstrate how a **Manager Agent can orchestrate multiple specialized AI agents** to solve a real-world personal document management workflow while ensuring that **important decisions and actions remain with the user**.
