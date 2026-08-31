@@ -476,6 +476,8 @@ Possible future enhancements include:
 
 A single AI agent can perform multiple tasks, but Life Admin Guardian divides responsibilities among specialized agents.
 
+<div align="center">
+
 Single Agent  
 ↓  
 One agent performs every task
@@ -489,6 +491,8 @@ Manager Agent
 Specialized Agents  
 ↓  
 Coordinated Results
+
+</div>
 
 This architecture allows each specialized agent to focus on a specific responsibility.
 
@@ -555,13 +559,15 @@ The system can:
 
 **Architecture:**
 
+<div align="center">
+
 Manager Agent  
 +  
 Specialized AI Agents  
 ↓  
 Multi-Agent Orchestration
 
-
+</div>
 
 ## 🏁 Conclusion
 
