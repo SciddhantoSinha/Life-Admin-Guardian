@@ -606,7 +606,7 @@ Suggested screenshots:
 
 ### Life Admin Guardian Interface
 
-
+![Life Admin Guardian Interface](screenshots/manager-agent-architecture.png)
 
 
 
